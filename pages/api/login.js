@@ -2,8 +2,8 @@ import { createClient } from '@supabase/supabase-js';
 
 // Initialize Supabase directly here (Bypassing the missing lib folder)
 const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  process.env.sb_publishable_9gTxuAHGI8Uhe5V9PM1B0Q_wmME3KUT,
+  process.env.sb_secret_Wk2B0qY8fA_C1Qz_romvJA_fOhdcNIN
 );
 
 export default async function handler(req, res) {
