@@ -1,4 +1,10 @@
-import { supabase } from '../../lib/supabaseClient';
+import { createClient } from '@supabase/supabase-js';
+
+// Initialize Supabase directly here to avoid "Module not found" errors with the lib folder
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+);
 
 export default async function handler(req, res) {
   // 1. Security Check: Only allow sending data (POST)
